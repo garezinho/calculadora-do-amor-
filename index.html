@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Título-->
+    <title>Calculadora do amor.</title>
+
+    <!--icone-->
+    <link rel="Icon" type="image/png" href="imagens/coracao.png">
+    
+    <!--CSS-->
+    <style>
+        #titulo {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        #coracoes {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            top: 490px;
+        }
+
+        #coracoes img {
+            height: 300px;
+            position: absolute;
+        }
+
+        #nome1 {
+            position: absolute;
+            top: 500px;
+            left: 490px;
+            
+        }
+
+        #nome2 {
+            position: absolute;
+            top: 500px;
+            left: 990px;
+            
+        }
+
+        #calcular {
+            position: absolute;
+            top: 150px;
+            left: 675px;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+            height: 90px;
+            width: 300px;
+            background-color: green;
+            border-radius: 60px;
+            font-style: initial;
+            font-size: 50px;
+            border: 0px;
+            
+        }
+
+        #calcular:hover {
+            transform: scale(1.1);
+        }
+
+        #resultado {
+            position: absolute;
+            top: 740px;
+            left: 530px;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ::placeholder {
+            color: gray;
+        }
+    </style>
+
+</head>
+
+<!--Cor do fundo-->
+<body bgcolor="#8B008B">
+
+    <h1 id="titulo">
+        <font face="Arial">&#x1F60D Calculadora do amor &#x1F60D</font>
+    </h1>
+
+    <div id="coracoes">
+        <img src="imagens/coracaonaoicone.png" style="left: 400px;">
+        <img src="imagens/coracao2.png" style="right: 400px;">
+        <button id="calcular" type="button" onclick="calcular()">Calcular</button>
+    </div>
+
+    <input type="text" id="nome1" name="nome1" placeholder="Insira um nome aqui" style="position: absolute; top: 500px; left: 490px;">
+    <input type="text" id="nome2" name="nome2" placeholder="Insira um nome aqui" style="position: absolute; top: 500px; left: 990px;">
+
+    <p id="resultado"></p>
+
+    <script src="calculo_amor.js"></script>
+
+</body>
+
+</html>
